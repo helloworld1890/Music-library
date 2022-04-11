@@ -36,13 +36,13 @@ const App = () => {
 
   return (
       <div>
-          <SearchContext value={{
+          <SearchContext.Provider value={{
               term: searchInput,
               handleSearch: handleSearch
 
           }} >
           <SearchBar  />
-          </SearchContext>
+          </SearchContext.Provider>
           {message}
           <DataContext.Provider value={data}>
           <Gallery />
